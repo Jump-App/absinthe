@@ -1,6 +1,8 @@
 # Changelog
 
-## [1.10.0](https://github.com/absinthe-graphql/absinthe/compare/v1.9.0...v1.10.0) (2026-04-03)
+## [1.10.1](https://github.com/absinthe-graphql/absinthe/compare/v1.9.0...v1.10.0) (2026-04-03)
+
+* Support Decimal 3.0
 
 
 ### Features
