@@ -153,7 +153,7 @@ defmodule Absinthe.Phase.Document.Validation.ExecutableDefinitionsTest do
 
       assert {:error, %{execution: %{validation_errors: errors}}, _} = run_phase(document, [])
       assert Enum.all?(errors, &match?(%Absinthe.Phase.Error{phase: @phase}, &1))
-      messages = Enum.map(errors, &(&1.message))
+      messages = Enum.map(errors, & &1.message)
       assert "Directive `@one` is not an executable definition" = Enum.at(messages, 0)
       assert "Type `Foo` is not an executable definition" = Enum.at(messages, 1)
       assert "Scalar `DateTime` is not an executable definition" = Enum.at(messages, 2)
