@@ -1873,6 +1873,12 @@ defmodule Absinthe.Schema.Notation do
               {:{}, [], [{env.module, atom}, opts]}
           end
 
+        # Special handling for Module.concat to allow breaking of compilation cycles
+        # Taken from Jason Axelson's PR, but ported to Absinthe 1.10.2
+        # https://github.com/absinthe-graphql/absinthe/pull/1380
+        {{:., _meta, [Module, :concat]}, _call_meta, _args} = val ->
+          {:{}, [], [{val, :call}, opts]}
+
         val ->
           val
       end
