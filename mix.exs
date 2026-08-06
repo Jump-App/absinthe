@@ -2,7 +2,7 @@ defmodule Absinthe.Mixfile do
   use Mix.Project
 
   @source_url "https://github.com/absinthe-graphql/absinthe"
-  @version "1.10.2"
+  @version "1.12.0"
 
   def project do
     [
@@ -120,7 +120,7 @@ defmodule Absinthe.Mixfile do
       "guides/variables.md",
       "guides/introspection.md",
       "guides/telemetry.md",
-      "guides/deprecation.md",
+      "guides/directives.md",
       "guides/adapters.md",
       "guides/complexity-analysis.md",
       "guides/file-uploads.md",
